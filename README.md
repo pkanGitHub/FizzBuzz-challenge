@@ -1,3 +1,3 @@
 # FizzBuzz-challenge
 
-Since the first branch is the main, so I am not going to merge the pull request, so you can see what I have from the beginning, then separate the new changes into different branches.
+The code in the main is the final version, I separate out the beginning code in first-version branch, and improve the program in the second branch call "improve-efficiency", then the third branch is going to be cleanning up and finalize.
