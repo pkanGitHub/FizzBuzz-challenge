@@ -1,9 +1,15 @@
 import random
 
-# I'm not sure how to make my prev code more efficient or simpler, so I am adding a feature for branch 2.
+def header():
+    print("-------------------------------")
+    print("Welcome to the FizzBuzz Program")
+    print("-------------------------------")
+    print("Choose a way to get a number: \n")
+
 def choice_menu():
     print("\n1. Let the computer pick")
-    print("2. Manually enter a number\n")
+    print("2. Manually enter a number")
+    print("3. Exit\n")
 
     your_choice = int(input("Enter your choice: "))
     return your_choice
@@ -29,11 +35,13 @@ def get_number():
         return computer_choice()
     elif choice == 2:
         return manual_choice()
+    elif choice == 3:
+        exit()
+    else:
+        print("Please enter a valid choice")
+        return get_number()
 
-# But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”.
-# For numbers which are multiples of both three and five print “FizzBuzz”.
-
-# define if it's fizz, buzz or fizzbuzz
+# define if the number is fizz, buzz or fizzbuzz
 def fizz_buzz(num):
     if num % 15 == 0:
         return ("FizzBuzz")
@@ -45,6 +53,7 @@ def fizz_buzz(num):
         return("neither multiples of three or five")
 
 def main():
+    header()
     num = get_number()
     fizz_or_buzz = fizz_buzz(num)
     print(f"\nThe number chosen was {num}, it is {fizz_or_buzz}")
